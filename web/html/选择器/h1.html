@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+/*        !*!*子*/
+/*        div > span{*/
+/*            color: orange;*/
+/*        }*/
+        /*后代*/
+        /*div span{*/
+        /*    color: skyblue;*/
+        /*}*/
+        /*!*孙*!*/
+        /*div>p>span{*/
+        /*    color: red;*/
+        /*}*/
+        /*!邻接下一个*!*/
+        /*p+span{*/
+        /*    color: silver;*/
+        /*}*/
+        /*邻接下所有*/
+        div~span{
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        我是一个div
+        <p>
+            我是div中的p元素
+            <span>我是p元素的span</span>
+        </p>
+        <span>我是div中的span元素</span>
+    </div>
+    <br>
+    <span>我是div外的span</span>
+    <br>
+    <span>我是div外的span</span>
+    <br>
+    <span>我是div外的span</span>
+    <br>
+    <span>我是div外的span</span>
+
+
+</body>
+</html>
