@@ -1,0 +1,61 @@
+
+
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+body{
+    font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+}
+
+
+.top-bar-wrapper{
+    width: 100%;
+    background-color: #e3e4e5;
+    line-height: 30px;
+    border-bottom: 1px #ddd solid;
+}
+
+.top-tar{
+    /*固定宽度*/
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.top-tar a:hover,
+.top-tar a.highlight{
+    color: #f10215;
+}
+
+.top-tar a,
+.top-tar span,
+.top-tar i{
+    color: #999999;
+    text-decoration: none;
+}
+
+.location{
+    float: left;
+}
+
+.location .fa-map-marker-alt{
+    color: #f10215;
+}
+
+.shortcut{
+    float: right;
+}
+
+.shortcut .line{
+    width: 1px;
+    height: 10px;
+    background-color: #999999;
+    margin: 10px 12px;
+}
+
+.shortcut li{
+    float: left;
+}
+
