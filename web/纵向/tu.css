@@ -1,0 +1,39 @@
+
+
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+body{
+    font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+    background-color: #497df7;
+}
+
+
+
+.left-nav{
+    width: 200px;
+    height: 250px;
+    padding: 10px 0;
+    background-color: #fff;
+    margin: 50px ;
+}
+.left-nav .item{
+    height: 25px;
+    line-height: 25px;
+    padding-left: 18px;
+}
+
+.item:hover{
+    background-color: #d9d9d9;
+}
+
+.item a{
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+

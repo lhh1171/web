@@ -1,0 +1,17 @@
+table{
+    width: 70%;
+    border: 1px solid black;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid black;
+    height: 10px;
+    vertical-align: center;
+    text-align: center;
+}
+
+tr:nth-child(odd){
+    background-color: #bfa;
+}
