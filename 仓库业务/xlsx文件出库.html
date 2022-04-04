@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+    <script src="jquery.min.js"></script>
+    <script src="xlsx.full.min.js"></script>
+</head>
+<body>
+
+<div style="margin:20px">
+    <input id="fileExcel" type="file" onchange="getExcelData(this)" style="width: 320px;">
+    <pre><p style="font-family: sans-serif;"></p></pre>
+</div>
+<script>
+
+    //读取Excel数据
+    function getExcelData(obj) {
+        var reader = new FileReader();
+
+        //文件加载完成后调用
+        reader.onload = function (e) {
+            var data = e.target.result;
+
+            //type为buffer时，IE浏览器不兼容xls
+            //var workbook = XLSX.read(data, {
+            //    type: 'buffer'
+            //});
+
+            //兼容IE，需把type改为binary，并对data进行转化
+            var workbook = XLSX.read(arrayBufferToBinaryString(data), {     //手动转化
+                type: 'binary'
+            });
+
+            //获取json格式的Excel数据
+            var jsonData = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], {
+                defval: 'null'  //单元格为空时的默认值
+            });
+            document.querySelector("p").innerHTML = JSON.stringify(jsonData, null, "\t");
+            //document.querySelector("p").innerHTML = JSON.stringify(jsonDataToCells(jsonData), null, "\t");
+        };
+
+        //加载文件
+        reader.readAsArrayBuffer(obj.files[0]);
+
+        //不兼容IE，该特性是非标准的，请尽量不要在生产环境中使用它！
+        //reader.readAsBinaryString(file);
+
+    }
+
+    //ArrayBuffer转BinaryString
+    function arrayBufferToBinaryString(data) {
+        var o = "",
+            l = 0,
+            w = 10240;
+        for (; l < data.byteLength / w; ++l) o += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w, l * w + w)));
+        o += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w)));
+        return o;
+    }
+
+    //转化为交错数组格式(兼容IE)
+    /*
+       [
+       [], //第一行数据
+       [], //第二行数据
+       [], //第三行数据
+       []  //第Ｎ行数据
+       ]
+    */
+    function jsonDataToCells(jsonData) {
+        var cellsData = [];     //用于存储所有数据
+        var rowData = [];       //用于临时存储每行数据
+        var jsonDataKeys = Object.keys(jsonData[0]);
+        for (var i = 0; i < jsonData.length; i++) {
+
+            //IE不兼容
+            //cellsData.push(Object.values(jsonData[i]));
+
+            for (var j = 0; j < jsonDataKeys.length; j++) {
+                rowData.push(jsonData[i][jsonDataKeys[j]]);
+            }
+            cellsData.push(rowData);
+            rowData = [];
+        }
+        return cellsData;
+    }
+
+</script>
+</body>
+</html>

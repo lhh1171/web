@@ -1,0 +1,88 @@
+*{margin:0;padding:0;}
+html,body{height:100%;text-align:center;}
+a:link,a:visited{text-decoration:none;}
+/*菜单个性设置*/
+body {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    /* 不设置的话页面滑动时，背景会不铺满*/
+    background: url("/tt.jpeg") no-repeat fixed;
+}
+.contain{
+    width: 800px;
+    height:600px;
+
+    float: left;
+}
+.box{
+    float: left;
+    width:211px;
+    height:80%;
+    margin:50px;
+}
+.box ul{
+    list-style:none;
+    text-align:left;
+}
+.box h2{
+    width:211px;
+    margin:0 auto;
+    height:26px;
+    background: rgba(126, 133, 148, 0.63) no-repeat left top;
+    text-indent:1px;
+    font-family:Verdana,Arial,Helvetica,sans-serif;
+    font-size:12px;
+    line-height:30px;
+    _line-height:33px;
+    color:#3d3d3d;
+    font-weight:normal;
+}
+/*一级菜单*/
+.menu li.level1 a{
+    display:block;
+    line-height:30px;
+    height:29px;
+    padding-left:50px;
+    font-size:12px;
+    color:#000;
+    background: #ffffff no-repeat left top;
+}
+/*一级菜单两态样式，供JS调用*/
+.menu li.level1 a.hove {
+    background:#82aedd no-repeat 30px center;
+    color: #152c5a;
+}
+/*点动是字体颜色*/
+.menu li.level1 a.cur{
+    background-position:left -58px;
+    color: #000000;
+}
+/*二级菜单*/
+.menu li ul{
+    padding-left:3px;
+    overflow:hidden;
+}
+.menu li ul.level2{
+    width:200px;
+    display:none;
+}
+.menu li ul.level2 li{
+    height:26px;
+    line-height:30px;
+}
+.menu li ul.level2 li a{
+    display:block;height:26px;
+    line-height:26px;
+    no-repeat:30px center;
+    padding-left:50px;
+    color:#42556B;
+    border-buttom:1px #fd0153 solid;
+    overflow:hidden;
+}
+/*二级菜单两态样式，供JS调用*/
+.menu li ul.level2 li a.hove1{
+    background:#82aedd no-repeat 30px center;
+    color:#000;
+}
+

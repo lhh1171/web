@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*表格样式*/
+        body {
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            /* 不设置的话页面滑动时，背景会不铺满*/
+            background: url("/tt.jpeg") no-repeat fixed;
+        }
+        table {
+            width: 90%;
+            background: #ccc;
+            margin: 10px auto;
+            border-collapse: collapse;/*border-collapse:collapse合并内外边距(去除表格单元格默认的2个像素内外边距*/
+        }
+        th,td {
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        th {
+            background: #eee;
+            font-weight: normal;
+        }
+        tr {
+            background: #fff;
+        }
+        tr:hover {
+            background: rgba(127, 154, 209, 0.63);
+        }
+        td a {
+            color: #06f;
+            text-decoration: none;
+        }
+        td a:hover {
+            color: #06f;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <table>
+                <tr>
+                    <td>出货号</td>
+                    <td >货物地</td>
+                    <td>出库号</td>
+                    <td>数量</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+
+    </div>
+</body>
+</html>

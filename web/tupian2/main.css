@@ -56,13 +56,13 @@
 /*添加背景图片  箭头 > */
 .left {
     left:0;
-    background-image: url("img/right.jpeg");
+    background-image: url("img/fr.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 .right {
     right:0;
-    background-image: url("img/right.jpeg");
+    background-image: url("img/fr.png");
     background-repeat: no-repeat;
     background-position: center;
 }

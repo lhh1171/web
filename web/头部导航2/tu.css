@@ -44,6 +44,7 @@ body{
     color: #f10215;
 }
 
+
 .shortcut{
     float: right;
 }
@@ -55,7 +56,18 @@ body{
     margin: 10px 12px;
 }
 
+.lii .list{
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid rgb(204,204,204,204);
+}
+.lii:hover .list{
+    display: block;
+}
 .shortcut li{
     float: left;
 }
+
 

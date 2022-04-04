@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a816fd84-b865-40ba-9aa8-79e93b6dc1a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ee/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ee/ee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ee/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ee/lib/lines-bus.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/教务系统/ff.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/教务系统/h1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/教务系统/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/教务系统/ss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/hh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/xlsx文件入库/h1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/xlsx文件入库/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/xlsx文件入库/xlsx.full.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/入库/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/拖拽/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/拖拽/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/拖拽/h1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/拖拽/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/查看仓库记录/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/查看仓库记录/tu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/查看仓库记录/出库记录/h1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/表格改良/h1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/首页导航/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/首页导航/ff.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/首页导航/h2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/首页导航/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../仓库业务/首页导航/ss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/头部导航2/h1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web/头部导航2/h1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/头部导航2/tu.css" beforeDir="false" afterPath="$PROJECT_DIR$/../web/头部导航2/tu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../仓库业务/入库/h1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../仓库业务/入库/h1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../仓库业务/入库/h2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../仓库业务/出库/h1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../仓库业务/出库/h1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../仓库业务/出库/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/../仓库业务/出库/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../仓库业务/更改仓库管理员/h1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../仓库业务/更改仓库管理员/h1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../仓库业务/查看仓库记录/h1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../仓库业务/查看仓库记录/入库记录/h1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../仓库业务/查看所有操作员/h1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../仓库业务/查看所有操作员/h1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../仓库业务/查看所有操作员/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/../仓库业务/查看所有操作员/table.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="package.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26sADIE1hqMEklsrTMXDDj4QKGf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ee" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ee" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ee/lib" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a816fd84-b865-40ba-9aa8-79e93b6dc1a3" name="Changes" comment="" />
+      <created>1648201800633</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648201800633</updated>
+      <workItem from="1648201801706" duration="982000" />
+      <workItem from="1648207962100" duration="8129000" />
+      <workItem from="1648220186652" duration="86000" />
+      <workItem from="1648281676902" duration="15000" />
+      <workItem from="1648737242694" duration="608000" />
+      <workItem from="1648800246136" duration="26000" />
+      <workItem from="1648897907535" duration="366000" />
+      <workItem from="1648899483029" duration="830000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
