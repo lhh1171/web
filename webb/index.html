@@ -1,0 +1,270 @@
+<!--
+    THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/zh/editor.html?c=line-stack
+-->
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+</head>
+<body >
+
+<script type="text/javascript" src="echarts.js"></script>
+<link rel="stylesheet" href="ss.css">
+<script src="list.js"></script>
+<div class="box">
+    <h1>tj仓库管理</h1>
+    <a href="index.html"><h2></h2></a>
+    <ul class="menu">
+        <li class="level1">
+            <a href="#none">查看仓库记录</a>
+            <ul class="level2">
+                <li><a href="/入库记录.html">入库记录</a></li>
+                <li><a href="/出库记录.html">出库记录</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="#none">入库</a>
+            <ul class="level2">
+                <li><a href="xlsx文件入库.html">xlsx文件入库</a></li>
+                <li><a href="入库.html">填入表格入库</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="#none">出库</a>
+            <ul class="level2">
+                <li><a href="xlsx文件出库.html">xlsx文件出库</a></li>
+                <li><a href="出库.html">填入表格出库</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="查看所有仓库属性.html">查看仓库详情</a>
+        </li>
+        <li class="level1">
+            <a href="查看所有操作员.html">查看所有操作员</a>
+        </li>
+    </ul>
+</div>
+<div class=" layui-col-md6">
+    <blockquote class="layui-elem-quote">
+        版本更新记录
+    </blockquote>
+    <div class="banner">
+        <!--轮播图的内容-->
+        <ul class="content">
+            <li><a href="###"><img src="img/44.jpg" alt=""></a></li>
+            <li><a href="###"><img src="img/11.webp" alt=""></a></li>
+            <li><a href="###"><img src="img/44.jpg" alt=""></a></li>
+            <li><a href="###"><img src="img/11.webp" alt=""></a></li>
+            <li><a href="###"><img src="img/44.jpg" alt=""></a></li>
+            <li><a href="###"><img src="img/11.webp" alt=""></a></li>
+            <li><a href="###"><img src="img/44.jpg" alt=""></a></li>
+            <li><a href="###"><img src="img/11.webp" alt=""></a></li>
+            <!--这里记得更换图片路径(＾Ｕ＾)ノ~ＹＯ-->
+        </ul>
+        <!--左右按钮-->
+        <div class="button">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <!--轮播图指示器 小圆点-->
+        <ul class="dot">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<div class="layui-col-md6">
+    <blockquote class="layui-elem-quote">
+        版本更新记录
+    </blockquote>
+    <div id="container2" class="contain"></div>
+</div>
+<script type="text/javascript">
+    //1.获取所有的图片
+    var imgs = document.querySelectorAll(".content>li");
+    //2.获取所有的圆点
+    var dots = document.querySelectorAll(".dot li");
+    //3.左按钮
+    var leftBtn = document.querySelector(".left");
+    //4.右按钮
+    var rightBtn = document.querySelector(".right");
+
+    //补充变量 存储当前正在显示的图片的下标
+    var index = 0;//默认第一张
+
+    //避免过度的快速点击,设置是否可以点击
+    var isClick = true;
+    //右侧按钮
+    rightBtn.onclick = function () {
+        if ( !isClick){
+            return;
+        }
+        isClick = false;
+        //延迟0.5秒执行
+        setTimeout(function () {
+            isClick = true;
+        }, 500);
+//    ----------------
+        //先隐藏当前显示的图片
+        imgs[index].style.opacity = 0;
+        //圆点
+        dots[index].style.backgroundColor = '#fff';
+        //下标增加
+        index++;
+        //判断下标 不要越界,一共8张 最大下标到7  从0开始
+        if(index == 8){
+            index = 0;
+        }
+        //切换新图片
+        imgs[index].style.opacity = 1;
+        dots[index].style.backgroundColor = "#dc192c";
+    };
+    //左侧按钮
+    leftBtn.onclick = function () {
+        if (!isClick) {
+            return;
+        }
+        isClick = false;
+        //延迟
+        setTimeout(function () {
+            isClick = true;
+        }, 500);
+//    -----------------------
+        imgs[index].style.opacity = 0;
+        dots[index].style.backgroundColor = '#fff';
+        index--;
+        if (index == -1){
+            index = 7;
+        }
+        imgs[index].style.opacity = 1;
+        dots[index].style.backgroundColor = "#dc192a";
+    };
+    //------------------------
+    //自动滚动
+    //获取底部的banner
+    var banner = document.querySelector(".banner");
+    //设置自动函数
+    function autoChange() {
+        imgs[index].style.opacity = 0;
+        dots[index].style.backgroundColor = "#fff";
+        index++;//默认向右滚动
+        if (index == 8){
+            index = 0;
+        }
+        //显示新的一张  和圆点
+        imgs[index].style.opacity = 1;
+        dots[index].style.backgroundColor = "#dc192a";
+    }
+    //自动切换--开启计时器
+    var timer = setInterval(autoChange, 1000);
+    //监测鼠标触摸banner的事件
+    banner.onmouseenter = function () {
+        //关闭计时器
+        clearInterval(timer);
+    };
+    //鼠标离开banner
+    banner.onmouseleave = function () {
+        //重新开始计时器
+        timer = setInterval(autoChange, 1000);
+    };
+    //鼠标经过小圆点 8个园点都可切换图片 所以每个圆点的功能都一样
+    for (var i = 0; i < 8; i++){
+        dots[i].onmousemove = function () {
+            //隐藏当前图片
+            imgs[index].style.opacity = 0;
+            dots[index].style.backgroundColor = '#fff';
+            //this: 代表当前当前触发事件元素
+            for(var j = 0; j < 8; j++){
+                if(dots[j] == this){
+                    //j就是当前触摸的圆点的下标
+                    index = j;
+                    break;//结束循环
+                }
+            }
+//新的位置
+            imgs[index].style.opacity = 1
+            dots[index].style.backgroundColor = '#dc192a';
+        };
+    }
+</script>
+<script type="text/javascript">
+    var dom = document.getElementById("container2");
+    var myChart = echarts.init(dom);
+    var app = {};
+
+    var option;
+
+    option = {
+
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name: 'Email',
+                type: 'line',
+                stack: 'Total',
+                data: [120, 132, 101, 134, 90, 230, 210]
+            },
+            {
+                name: 'Union Ads',
+                type: 'line',
+                stack: 'Total',
+                data: [220, 182, 191, 234, 290, 330, 310]
+            },
+            {
+                name: 'Video Ads',
+                type: 'line',
+                stack: 'Total',
+                data: [150, 232, 201, 154, 190, 330, 410]
+            },
+            {
+                name: 'Direct',
+                type: 'line',
+                stack: 'Total',
+                data: [320, 332, 301, 334, 390, 330, 320]
+            },
+            {
+                name: 'Search Engine',
+                type: 'line',
+                stack: 'Total',
+                data: [820, 932, 901, 934, 1290, 1330, 1320]
+            }
+        ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart.setOption(option);
+    }
+
+</script>
+</body>
+</html>

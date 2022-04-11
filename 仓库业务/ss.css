@@ -10,8 +10,10 @@ body {
     background: url("/tt.jpeg") no-repeat fixed;
 }
 .contain{
-    width: 590px;
-    height:470px;
+    width: 800px;
+    height:600px;
+
+    float: left;
 }
 .box{
     float: left;
@@ -78,126 +80,9 @@ body {
     border-buttom:1px #fd0153 solid;
     overflow:hidden;
 }
-
 /*二级菜单两态样式，供JS调用*/
 .menu li ul.level2 li a.hove1{
     background:#82aedd no-repeat 30px center;
     color:#000;
 }
 
-.page{
-	position:absolute;
-	left:300px;
-	right: 0px;
-	top:0;
-	bottom:0;
-	z-index: 998;
-	overflow: hidden;
-	overflow-y: auto;
-	box-sizing: border-box;
-}
-.layui-col-md6{
-    color: #666;
-    font: 14px Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    border-left: 15px solid#ffffff;
-    float: left;
-}
-.layui-elem-quote{
-    margin-bottom: 10px;
-    padding: 15px;
-    line-height: 22px;
-    border-left: 5px solid#009688;
-    background-color: #f2f2f2;
-}
-/*底部banner模块*/
-.banner {
-    width: 590px;
-    height: 470px;
-    border: 5px solid gold;
-    margin: 50px auto;
-    /*定位  让子级在使用绝对定位的时候 以父级为参考*/
-    position: relative;/*不脱离文档流 对网页标签无影响*/
-}
-/*高清 ** 大图 */
-.content {
-    list-style:none;/*去除列表自带圆点*/
-    position: relative;
-}
-.content > li{
-    position: absolute;
-    top:0;
-    left:0;
-    /*先全部隐藏*/
-    opacity:0;
-    /*添加切换图片的过渡动画*/
-    transition:opacity 0.5s;
-}
-.content>li:nth-child(1){
-    opacity:1;
-}
-/*按钮*/
-.button {
-    padding-top: 180px;
-    position: relative;
-}
-.left,.right {
-    width: 30px;
-    height: 60px;
-    position: absolute;
-    background-color: rgba(0,0,0,0.1);
-    opacity:0;
-}
-
-/*鼠标划入就显示*/
-/******  hover后面不可使用群组性的选择器*/
-.banner:hover .button>.left {
-    opacity:1;
-}
-.banner:hover .right{
-    opacity:1;
-}
-/*鼠标划入按钮 颜色加深*/
-.left:hover, .right:hover{
-    background-color: rgba(126, 133, 148, 0.63);
-}
-/*添加背景图片  箭头 > */
-.left {
-    left:0;
-    background-image: url("img/fr.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.right {
-    right:0;
-    background-image: url("img/fr.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-/*----------*/
-/*小圆点*/
-.dot {
-    list-style:none;
-    position: absolute;
-    left: 50%;
-    bottom: 30px;
-    background-color: rgba(255, 255,255, 0.3);
-    border-radius: 12px;
-    padding:5px;
-    margin-left: -94px;
-}
-.dot li {
-    width:12px;
-    height: 12px;
-    border-radius: 6px;
-    background-color: white;
-    float: left;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.dot li:nth-child(1){
-    background-color: #dc192a;
-}

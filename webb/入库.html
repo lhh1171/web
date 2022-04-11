@@ -3,47 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        /*表格样式*/
-        body {
-            width: 100%;
-            height: 100%;
-            background-size: 100% 100%;
-            /* 不设置的话页面滑动时，背景会不铺满*/
-            background: url("tt.jpeg") no-repeat fixed;
-        }
-        table {
-            width: 90%;
-
-            background: #ccc;
-            margin: 10px auto;
-            border-collapse: collapse;/*border-collapse:collapse合并内外边距(去除表格单元格默认的2个像素内外边距*/
-        }
-        th,td {
-            height: 25px;
-            line-height: 25px;
-            text-align: center;
-            border: 1px solid #ccc;
-        }
-        th {
-            background: #eee;
-            font-weight: normal;
-        }
-        tr {
-            background: #fff;
-        }
-        tr:hover {
-            background: rgba(127, 154, 209, 0.63);
-        }
-        td a {
-            color: #06f;
-            text-decoration: none;
-        }
-        td a:hover {
-            color: #06f;
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="ss.css">
+	<link rel="stylesheet" href="house.css">
+    <script src="list.js"></script>
+	
     <script>
         function getTableContent(){
             var mytable = document.getElementById("ii");
@@ -64,7 +27,45 @@
     </script>
 </head>
 <body>
-
+<blockquote class="layui-elem-quote">
+    版本更新记录
+</blockquote>
+<br><br><br><br>
+<div class="box">
+    <h1>tj仓库管理</h1>
+    <a href="index.html"><h2></h2></a>
+    <ul class="menu">
+        <li class="level1">
+            <a href="#none">查看仓库记录</a>
+            <ul class="level2">
+                <li><a href="/入库记录.html">入库记录</a></li>
+                <li><a href="/出库记录.html">出库记录</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="#none">入库</a>
+            <ul class="level2">
+                <li><a href="xlsx文件入库.html">xlsx文件入库</a></li>
+                <li><a href="入库.html">填入表格入库</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="#none">出库</a>
+            <ul class="level2">
+                <li><a href="xlsx文件出库.html">xlsx文件出库</a></li>
+                <li><a href="出库.html">填入表格出库</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="查看所有仓库属性.html">查看仓库详情</a>
+        </li>
+        <li class="level1">
+            <a href="查看所有操作员.html">查看所有操作员</a>
+        </li>
+    </ul>
+</div>
+	<div class="page">
+        <br><br><br><br>
             <table id="ii">
                 <tr>
                     <td>发货号</td>
@@ -124,8 +125,6 @@
             <input id="submit1" type="submit" value="换页继续添加"/>
             <input id="submit2" type="submit" value="完成并查看入库单"/>
             <input type="button" onClick="getTableContent();" style="font-size:16px;" value="+"/>
-    <div>
-
     </div>
 </body>
 </html>

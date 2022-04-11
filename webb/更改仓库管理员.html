@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="ss.css">
+    <script src="list.js"></script>
+    <script src="jquery.min.js"></script>
     <style>
         .layui-form{
             color: #666;
@@ -20,7 +23,7 @@
             clear: both;
         }
         .layui-inline{
-
+            float: left;
             color: #666;
             font: 14px Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
             padding: 0;
@@ -28,9 +31,9 @@
             position: relative;
             vertical-align: middle;
             display: block;
-            margin: 0 0 20px;
-            clear: both;
-            /*float: left;*/
+            /*margin: 0 0 20px;*/
+            /*clear: both;*/
+            float: left;
         }
         .layui-btn{
             margin: 0;
@@ -106,9 +109,47 @@
     </style>
 </head>
 <body>
-<div>
+<blockquote class="layui-elem-quote">
+    版本更新记录
+</blockquote>
+<br><br><br><br>
+<div class="box">
+    <h1>tj仓库管理</h1>
+    <a href="index.html"><h2></h2></a>
+    <ul class="menu">
+        <li class="level1">
+            <a href="#none">查看仓库记录</a>
+            <ul class="level2">
+                <li><a href="/入库记录.html">入库记录</a></li>
+                <li><a href="/出库记录.html">出库记录</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="#none">入库</a>
+            <ul class="level2">
+                <li><a href="xlsx文件入库.html">xlsx文件入库</a></li>
+                <li><a href="入库.html">填入表格入库</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="#none">出库</a>
+            <ul class="level2">
+                <li><a href="xlsx文件出库.html">xlsx文件出库</a></li>
+                <li><a href="出库.html">填入表格出库</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="查看所有仓库属性.html">查看仓库详情</a>
+        </li>
+        <li class="level1">
+            <a href="查看所有操作员.html">查看所有操作员</a>
+        </li>
+    </ul>
+</div>
+<div class="page">
     <form class="layui-form" id="query_form">
         <div class="layui-form-item">
+            <br><br><br><br><br><br><br><br><br>
             <div class="layui-inline">
                 <label class="layui-form-mid">id：</label>
                 <div class="layui-input-inline" style="width: 100px;">
