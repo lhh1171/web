@@ -67,9 +67,12 @@
 				padding-left: 15px;
 				text-align: left;
 			}
-			.img{
-				text-align: match-parent ;
+
+			img{
+				text-align: center;
 				padding-left: 8px;
+				display: inline-block;
+				vertical-align: middle;
 			}
 
 			#checkcode{
